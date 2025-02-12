@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Shorts Limiter",
+    "version": "1.0",
+    "description": "Limits YouTube Shorts viewing by closing tab after 5 shorts",
+    "permissions": [
+      "tabs",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  } 
